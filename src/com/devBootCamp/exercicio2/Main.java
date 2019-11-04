@@ -2,6 +2,7 @@ package com.devBootCamp.exercicio2;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -81,5 +82,19 @@ public class Main {
 
         System.out.println();
 
+        Financeiro financeiro = new Financeiro();
+        financeiro.setSalario(BigDecimal.valueOf(1300));
+
+        System.out.println("******************************");
+        RelatorioSalario relatorioSalario = new RelatorioSalario();
+       // relatorioSalario.resumoSalario(financeiro);
+//        relatorioSalario.resumoSalarioProfessor(professor);
+//
+//        relatorioSalario.resumoSalarioFinanceiro(financeiro);
+
+        relatorioSalario.resumoSalario(financeiro);
+//        relatorioSalario.resumoSalario(professor);
+
+        relatorioSalario.resumoSalario(List.of(professor, financeiro));
     }
 }
